@@ -1,16 +1,50 @@
-package _4_01_Route_Between_Nodes;
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+import org.apache.commons.lang.ArrayUtils;
 
-import common.GraphNode;
-import sun.jvm.hotspot.utilities.Assert;
+public class Solution {
 
-public class Tester {
-	public static void main(String[] args) {
-		System.out.println("*** Test 4.1: Route Between Nodes\n");
-		GraphNode node1 = new GraphNode(1);
-		GraphNode node2 = new GraphNode(2);
-		GraphNode node3 = new GraphNode(3);
-		node1.addNeighbor(node2);
-		node2.addNeighbor(node3);
-		System.out.println("Route exists? (should be true): " + RouteBetweenNodes.routeExists(node1, node3));
-	}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        ArrayList<Float> nums = new ArrayList<Float>();
+        Map<Float, Integer> counts = new HashMap<Float, Integer>();
+
+        int n = sc.nextInt();
+        float sum = 0;
+
+        for(int i = 0; i < n; i++) {
+            float current = sc.nextFloat();
+
+            nums.add(current);
+
+            if(counts.get(current) != null) {
+                counts.put(current, counts.get(current) + 1);
+            } else {
+                counts.put(current, 1);
+            }
+
+            sum += current;
+        }
+
+        Collections.sort(nums);
+
+        float mean = (float)(sum / n);
+        float median = (n % 2 == 0) ? ((float)(nums.get(n/2 - 1) + nums.get(n/2)) / 2) : nums.get(n/2 - 1);
+        float mode = nums.get(0);
+        int currentSize = counts.get(nums.get(0));
+
+        for(int x = 1; x < nums.size(); x++) {
+            if(counts.get(nums.get(x)) > currentSize) {
+                currentSize = counts.get(nums.get(x));
+                mode = nums.get(x);
+            }
+        }
+
+        System.out.println(mean);
+        System.out.println(median);
+        System.out.println(Math.round(mode));
+    }
 }
