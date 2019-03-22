@@ -5,15 +5,12 @@
     <br>302 efficient solutions to HackerRank problems
 </p>
 
-* [10 Days of Statistics](#10-days-of-statistics)
 * [30 Days of Code](#30-days-of-code)
 * [Algorithms](#algorithms)
 * [Cracking the Coding Interview](#cracking-the-coding-interview)
 * [Data Structures](#data-structures)
 * [General Programming](#general-programming)
-* [Implementation](#implementation)
 * [Java](#java)
-* [SQL](#sql)
 
 Solutions are coded using Java 8
 
@@ -282,3 +279,5 @@ Solutions are coded using Java 8
 |           Advanced          | [Java Lambda Expressions](https://www.hackerrank.com/challenges/java-lambda-expressions)                                 |   30   | [Solution.java](https://github.com/OktayGardener/hackerrank/blob/master/Java/Advanced/Java%20Lambda%20Expressions/Solution.java)                                               |
 |           Advanced          | [Java MD5](https://www.hackerrank.com/challenges/java-md5)                                                               |   30   | [Solution.java](https://github.com/OktayGardener/hackerrank/blob/master/Java/Advanced/Java%20MD5/Solution.java)                                                                |
 |           Advanced          | [Java SHA-256](https://www.hackerrank.com/challenges/sha-256)                                                            |   30   | [Solution.java](https://github.com/OktayGardener/hackerrank/blob/master/Java/Advanced/Java%20SHA-256/Solution.java)                                                            |
+
+Thanks to https://github.com/RodneyShag/ for template.
